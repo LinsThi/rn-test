@@ -14,7 +14,6 @@ export function Header({ ...rest }: TextInputProps) {
       <TextInput
         style={styles.input}
         placeholder="Search for a name"
-        keyboardType="numeric"
         placeholderTextColor="#acacac"
         {...rest}
       />
