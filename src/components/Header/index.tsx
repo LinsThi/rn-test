@@ -1,20 +1,22 @@
-import React, { useState } from "react";
-import { View, TextInput, TouchableOpacity } from "react-native";
+import React from "react";
+import {
+  View,
+  TextInput,
+  TouchableOpacity,
+  TextInputProps,
+} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { styles } from "./styles";
 
-export function Header() {
-  const [value, setValue] = useState("");
-
+export function Header({ ...rest }: TextInputProps) {
   return (
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        onChangeText={setValue}
-        value={value}
         placeholder="Search for a name"
         keyboardType="numeric"
         placeholderTextColor="#acacac"
+        {...rest}
       />
 
       <TouchableOpacity>

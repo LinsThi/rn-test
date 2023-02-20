@@ -12,6 +12,14 @@ import { ListPeoplesDTO } from "../../dtos/ListPeoplesDTO";
 
 export function Home() {
   const [listRender, setListRender] = useState(DataResult);
+  const [search, setSearch] = useState("");
+
+  const filteredList =
+    search.length > 0
+      ? listRender.filter((currentData) =>
+          currentData.name.toLowerCase().includes(search)
+        )
+      : listRender;
 
   const handleAddList = (chosenToAddInList: ListPeoplesDTO) => {
     setListRender((prev) => [...prev, chosenToAddInList]);
@@ -24,9 +32,9 @@ export function Home() {
         backgroundColor="transparent"
         translucent
       />
-      <Header />
+      <Header value={search} onChangeText={setSearch} />
 
-      <ListPeoples dataFlatList={listRender} />
+      <ListPeoples dataFlatList={filteredList} />
 
       <FloatingMenu functionAddList={handleAddList} />
     </View>
