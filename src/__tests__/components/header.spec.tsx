@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import { Ionicons } from "@expo/vector-icons";
 
 import { Header } from "../../components/Header";
 
