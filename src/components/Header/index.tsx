@@ -15,10 +15,12 @@ export function Header({ ...rest }: TextInputProps) {
         style={styles.input}
         placeholder="Search for a name"
         placeholderTextColor="#acacac"
+        testID="id-search"
+        value=""
         {...rest}
       />
 
-      <TouchableOpacity>
+      <TouchableOpacity testID="id-button">
         <Ionicons name="filter" size={24} color="#acacac" />
       </TouchableOpacity>
     </View>
