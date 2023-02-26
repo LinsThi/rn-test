@@ -24,4 +24,13 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     color: "#acacac",
   },
+  contentEmpty: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  emptyText: {
+    fontSize: 25,
+    color: "#fff",
+  },
 });

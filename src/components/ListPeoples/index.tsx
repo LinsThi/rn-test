@@ -35,6 +35,12 @@ export function ListPeoples({ dataFlatList }: Props) {
         style={{ marginTop: 15 }}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 35 }}
+        testID="id-list-peoples"
+        ListEmptyComponent={() => (
+          <View style={styles.contentEmpty} testID="id-empty-array">
+            <Text style={styles.emptyText}>Empty Data</Text>
+          </View>
+        )}
       />
     </View>
   );
