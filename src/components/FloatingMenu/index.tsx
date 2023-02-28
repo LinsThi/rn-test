@@ -62,6 +62,7 @@ export function FloatingMenu({ functionAddList }: Props) {
         <ButtonAnimated
           onPress={handleClick}
           style={[styles.button, { backgroundColor: "orange" }]}
+          testID="id-floating-button"
         >
           <AntDesign name="plus" size={24} color="white" />
         </ButtonAnimated>
