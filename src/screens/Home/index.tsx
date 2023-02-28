@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { View, StatusBar } from "react-native";
 
-import { DataResult } from "../../mock/dataResult";
-
 import { FloatingMenu } from "../../components/FloatingMenu";
 import { Header } from "../../components/Header";
 import { ListPeoples } from "../../components/ListPeoples";
 
-import { styles } from "./styles";
 import { ListPeoplesDTO } from "../../dtos/ListPeoplesDTO";
+
+import { DataResult } from "../../mock/dataResult";
+import { styles } from "./styles";
 
 export function Home() {
   const [listRender, setListRender] = useState(DataResult);
